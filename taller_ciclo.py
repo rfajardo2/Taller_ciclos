@@ -133,7 +133,7 @@ sh = 0
 sf = 0
 totalal = int(input('Por favor ingrese el total de alumnos: '))
 
-for x in range(1,totalal + 1):
+for x in range(1, totalal + 1):
     ed = int(input('Ingresa tu edad: '))
     sx = input('Por favor ingresa tu sexo(M o F): ')
     suma = suma + ed
@@ -145,5 +145,37 @@ for x in range(1,totalal + 1):
 print(f'El promedio de edades de todo el grupo es de:', suma/totalal)
 print(f'El promedio de edades de Hombres es de:', sh/totalal)
 print(f'El promedio de edades de Mujeres es de:', sf/totalal)
+
+
+# --------------------------------------------------------------------
+
+
+"""Encontrar el menor valor de un conjunto de n números dados"""
+
+num = int(input("Por favor digita el total de numeros a calcular: "))
+x = 1
+for x in range(1, num + 1):
+
+    n = int(input("Por favor digita un numero: "))
+    if x == 1:
+        nm = n
+    elif n < nm:
+        nm = n
+    x = + 1
+print(f'El numero menor es: {nm}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
