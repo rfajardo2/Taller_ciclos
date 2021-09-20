@@ -81,17 +81,69 @@ for i in range(1, total + 1):
     elif edad > 1 and edad < 3:
         categoria2 = + 1
     elif edad >= 3:
-        categoria3 = + 1    
-calculo= float((categoria1/total))*100
-if p == 1:        
-    print(f'Porcentaje de edad de: ',animal)
-    print (calculo),"porcentaje de 0 1 year"        
-elif p == 2:    
-    print(f'Porcentaje de edad de: ',animal)
-    print(calculo),"porcentaje de mas de 1 year y menos de 3"        
+        categoria3 = + 1
+calculo = float((categoria1 / total)) * 100
+if p == 1:
+    print(f'Porcentaje de edad de: {animal}')
+    print(f'{calculo} porcentaje de 0 1 year')
+elif p == 2:
+    print(f'Porcentaje de edad de: {animal}')
+    print(f'{calculo} porcentaje de mas de 1 year y menos de 3')
 elif p == 3:
-    print(f'Porcentaje de edad de: ',animal)        
-    print(calculo),"porcentaje de 3 o mas year"        
+    print(f'Porcentaje de edad de: {animal}')
+    print(f'{calculo} porcentaje de 3 o mas year')
 
+
+# --------------------------------------------------------------------------
+
+"""
+Una empresa se requiere calcular el salario semanal de cada uno de los n
+obreros que laboran en ella. El salario se obtiene de la siguiente forma:
+a. Si el obrero trabaja 40 horas o menos se le paga $20 por hora
+b. Si trabaja mas de 40 horas se le paga $20 por cada una de
+lasprimeras 40 horas y $25 por cada hora extra
+ """
+salario = 0
+x = 1
+horas = 0
+hextras = 0
+num_obreros = int(input('Por favor digite el numero de obreros que aboran en la empresa: '))
+
+if num_obreros >= 1:
+    for x in range(1, num_obreros + 1):
+        horas = int(input('Por favor digite el numero de horas trabajadas:'))
+
+        if horas >= 1 and horas <= 40:
+            salario = float(horas * 20)
+        else:
+            hextras = horas - 40
+            salario = 40 * 20 + (hextras * 25)
+        x = + 1
+        print(f'El salario del trabajador {x} es:  {salario}')
+
+
+# --------------------------------------------------------------------
+"""
+Calcular el promedio de edades de hombres, mujeres y de todo un grupo
+de alumnos.
+"""
+x = 1
+suma = 0
+sh = 0
+sf = 0
+totalal = int(input('Por favor ingrese el total de alumnos: '))
+
+for x in range(1,totalal + 1):
+    ed = int(input('Ingresa tu edad: '))
+    sx = input('Por favor ingresa tu sexo(M o F): ')
+    suma = suma + ed
+    if sx == 'M' or sx == 'm':
+        sh =  suma+ed
+    elif sx == 'F' or sx == 'f':
+        sf == suma + ed
+    x=+1
+print(f'El promedio de edades de todo el grupo es de:', suma/totalal)
+print(f'El promedio de edades de Hombres es de:', sh/totalal)
+print(f'El promedio de edades de Mujeres es de:', sf/totalal)
 
 
